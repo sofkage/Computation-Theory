@@ -1,0 +1,91 @@
+
+
+
+func begin(){
+
+    writeString("\nPlease enter your name: ");
+    var str = readString() string;
+
+    writeString("Welcome, ");
+    writeString(str);
+    writeString("\n");
+
+    writeString("Your income for this month is ");
+    var dec = 4.245e2 real;
+    writeReal(dec);
+    writeString("$");
+
+    var power=2 int;
+    var result real;
+
+    result = dec ** 3;
+    writeString("\n\nIf you invest your money, in one year you will have earned  ");
+
+    writeInt(result);
+    writeString("$");
+
+
+    writeString("\n\nWe will check if you are able to invest your money. ");
+
+    writeString("\nFor the following questions, please enter 1 for *yes* and 2 for *no*");
+
+    writeString("\nPlease answer if you have childen: ");
+    var childen = readInt() int;
+    
+    writeString("\nPlease answer if you pay rent: ");
+    var rent = readInt() int;
+
+    writeString("\nPlease answer if have got loan: ");
+    var loan = readInt() int;
+
+    var chlidren_bool  bool;
+    var rent_bool bool;
+    var loan_bool bool;
+
+    if (childen==1){
+        chlidren_bool=true;
+    }else{
+        chlidren_bool=false;
+    }
+
+    if (rent==1){
+        rent_bool=true;
+    }else{
+        rent_bool=false;
+    }
+
+    if (loan==1){
+        loan_bool=true;
+    }else{
+        loan_bool=false;
+    }
+
+
+
+    if((chlidren_bool==true and rent_bool==true and loan_bool==true )or(chlidren_bool==true and rent_bool==true and loan_bool==false )){
+        writeString("\nYou cannot invest your money. Too risky.\n");
+
+    }else if (chlidren_bool==true and rent_bool==false and loan_bool==true ){
+        writeString("\nIt is not a good idea to invest your money.\n");
+
+    }else if (chlidren_bool==true and rent_bool==false and loan_bool==false ){
+        writeString("\nYou could invest your money but be careful!\n");
+
+    }else if (chlidren_bool==false and rent_bool==true and loan_bool==true ){
+        writeString("\nIt is a bit risky to invest your money.\n");
+
+    }else if (chlidren_bool==false and rent_bool==true and loan_bool==false ){
+        writeString("\nYou could invest your money properly.\n");
+
+    }else if (chlidren_bool==false and rent_bool==false and loan_bool==true ){
+        writeString("\nIt is not a good idea to invest your money.\n");
+
+    }else if (chlidren_bool==false and rent_bool==false and loan_bool==false ){
+        writeString("\nYou can invest your money.\n");
+
+    }
+
+
+
+
+}
